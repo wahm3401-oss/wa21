@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wa21 | صفحة ويب</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin-right: 25px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d2ff;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 210, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5, #00d2ff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 210, 255, 0.4);
+        }
+
+        /* Cards */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px 30px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 210, 255, 0.4);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #00d2ff;
+        }
+
+        .card p {
+            color: #bbb;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #777;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: #00d2ff;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">wa21</div>
+            <nav>
+                <a href="#">الرئيسية</a>
+                <a href="#features">المميزات</a>
+                <a href="#">تواصل</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>مرحباً بك في <span>wa21</span></h1>
+            <p>صفحة ويب حديثة وأنيقة تم إنشاؤها خصيصاً لك. تصميم نظيف، ألوان جذابة، وتجربة مستخدم رائعة.</p>
+            <a href="#features" class="btn">اكتشف المزيد</a>
+        </section>
+
+        <section class="features" id="features">
+            <div class="card">
+                <div class="icon">✨</div>
+                <h3>تصميم عصري</h3>
+                <p>واجهة مستخدم أنيقة مع تأثيرات بصرية جميلة وتدرجات لونية جذابة تناسب جميع الأجهزة.</p>
+            </div>
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>سرعة عالية</h3>
+                <p>كود نظيف وخفيف يضمن تحميل سريع وأداء ممتاز على كل المتصفحات والأجهزة.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📱</div>
+                <h3>متجاوب بالكامل</h3>
+                <p>يعمل بشكل مثالي على الجوال والتابلت والكمبيوتر مع تجربة مستخدم موحدة.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>صُنع بـ ❤️ لمشروع <a href="https://github.com/wahm3401-oss/wa21" target="_blank">wa21</a> على GitHub</p>
+        </footer>
+    </div>
+</body>
+</html>
